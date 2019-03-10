@@ -117,8 +117,33 @@ CSS information
 			text-transform: uppercase;
 			color: $white;
 			margin-bottom: 1em;
+			@include mq(sp) {
+				position: relative;
+				background:rgba(#F9F9F9, .1);
+				padding: .5em .5em;
+				&:before{
+					content: "\f0d7" !important;
+					font-family: "FontAwesome";
+					position: absolute;
+					right: .8em;
+					top: 50%;
+					color: #FFF;
+					@include transform(translate(0,-50%)); 
+					width: auto;
+					left: inherit;
+					font-size: 80%;
+				}
+				&.active{
+					&:before{
+						content: "\f0d8" !important;
+					}
+				}				
+			}
 		}
 		ul{
+			@include mq(sp) {
+				display: none;
+			}
 			li{
 				a{
 					color: $white;
@@ -132,7 +157,12 @@ CSS information
 	.footer-box-hotline{
 		border-top: 1px solid rgba(#F9F9F9, .1);
 		margin-top: 2em;
-		padding-top: 3em;		
+		padding-top: 3em;	
+		@include mq(tab) {
+			.col-xs-12.col-md-3.col-lg-3 {
+				margin-bottom: 2em;
+			}
+		}	
 		.item{
 			@include mq(sp) {
 				margin-bottom: 1em;
@@ -161,6 +191,10 @@ CSS information
 		padding-top: 2em;
 		.text-copyright{
 			color: $white;
+			@include mq(sp) {
+				text-align: center;
+				margin-bottom: 2em;
+			}
 			strong{
 				margin-bottom: .3em;
 				display: block;
@@ -177,4 +211,157 @@ CSS information
 			}
 		}
 	}	
+}
+
+/* -----------------------------------------------------------
+	fix_active
+----------------------------------------------------------- */
+body.fix_active {
+	width: 100%;
+	top: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	.fixOpenMenu {
+		overflow: auto;
+		@include opacity(1);
+		visibility:visible;
+		z-index: 999;
+	}
+	
+}
+
+/* -----------------------------------------------------------
+	.fixmenu
+----------------------------------------------------------- */
+.fixmenu {
+	position: fixed;
+	z-index: -9;
+	@include opacity(0);
+	visibility:hidden;
+	width:100%;
+	top: 0;
+	right: 0;
+	height: 100%;
+	background: rgba($navatop, .95);
+	overflow: hidden;
+	@include transition(all .5s ease);
+	-webkit-overflow-scrolling: touch;
+	.fixmenu_inner{
+		margin:auto;
+		padding-top: 1em;
+		@include mq(tab) {
+			width:95%;
+		}
+		h3{
+			margin-bottom: 1em;
+			text-align: center;
+			color: $white;
+			@include fsz(20);
+		}
+	}
+	.box_menu{
+		@include clearfix;		
+		width:100%;
+		@include box-sizing(border-box);
+		margin:auto;
+		.list_menu{
+			width:100%;			
+			padding:0;
+			margin: auto;
+			@include box-sizing(border-box);
+			position: relative;	
+			@extend %cf;	
+			li{
+				@include fsz(14);
+				@include box-sizing(border-box);
+				position: relative;
+				border-top: 1px solid rgba(#F9F9F9, .1);
+				width:100%;
+				float: left;
+				&:last-child{
+					border-bottom: 1px solid rgba(#F9F9F9, .1);
+				}
+				a{
+					@include box-sizing(border-box);
+					text-decoration: none;
+					display: block;
+					padding: .8em 5%;
+					position: relative;
+					@include fsz(16);
+					@include transition(all .3s ease);
+					@include opacity(1);
+					color: $white;
+					&:hover{
+						@include opacity(.7);
+					}
+					@include mq(sp) {
+						font-size: 100%;
+					}						
+				}
+			}	
+		}
+		.btn-link-vip{
+			@extend %cf;
+			padding: 1em 5%;
+			li{
+				float: left;
+				@include grid-col(2,5%,1);
+				.btn{
+					display: block;
+				}
+				.btn-default{
+					background:$white;
+					border-color:$white;
+				}
+			}
+		}
+	}
+}
+.btn_closeall{
+	text-align: center;
+	margin: 1.5em 0 3em;
+	@include mq(sp) {
+		margin-bottom: 2em;
+	}
+	.ic_close{
+		width: 5.5em;
+		padding-top: 0.5em;
+		height: 5.5em;
+		margin: auto;
+		display: block;
+		@include border-radius(50%);
+		@include clearfix;
+		text-transform: uppercase;
+		color: $white;
+		.line_close{
+			height: 2.5em;
+			width: 3em;
+			position: relative;
+			display: block;
+			margin: auto;
+			margin-bottom: 0.3em;
+			&:before,&:after{
+				content:"";
+				width: 100%;
+				height: 2px;
+				background: $white;
+				position: absolute;
+				left: 0;
+				bottom: 1em;
+			}
+			&:before{
+				@include transform(rotate(-45deg));
+			}
+			&:after{
+				@include transform(rotate(45deg));
+			}
+		}			
+		em{
+			color: $white;
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
 }

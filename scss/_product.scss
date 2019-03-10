@@ -90,7 +90,7 @@ CSS information
 			li{
 				display: inline-block;
 				color: #636982;
-				@include cV(padding,0 1em 0 0,0 5em 0 0,0 1em 0 0);
+				@include cV(padding,0 1em 0 0,0 .5em 0 0,0 1em 0 0);
 				&:not(:first-child) {
 					&:before{
 						content: "";
@@ -106,7 +106,7 @@ CSS information
 			}
 			&.list-pro{
 				li{
-					@include cV(padding,0 1.5em 0 0,0 5em 0 0,0 1em 0 0);
+					@include cV(padding,0 1.5em 0 0,0 0 .5em 0,0 1em 0 0);
 					img{
 						vertical-align: middle;
 						margin-right: 5px;

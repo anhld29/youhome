@@ -35,7 +35,7 @@
     	<div class="box-purchase-lease bg-gray">
     		<div class="container">
 	    		<div class="row">
-	    			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	    			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
 	    				<div class="box-item">
 	    					<div class="box-title">
 	    						<h4>Cho vay mua nhà</h4>
@@ -44,7 +44,7 @@
 	    					<div class="box-img"><img src="images/cho_vay_mua_nha.png" alt="Cho vay mua nhà"></div>
 	    				</div>
 	    			</div>
-	    			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	    			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
 	    				<div class="box-item">
 	    					<div class="box-title">
 	    						<h4>Thiết kế nội thất</h4>
@@ -53,7 +53,7 @@
 	    					<div class="box-img"><img src="images/thiet_ke_noi_that.png" alt="Thiết kế nội thất"></div>
 	    				</div>
 	    			</div>
-	    			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	    			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
 	    				<div class="box-item">
 	    					<div class="box-title">
 	    						<h4>Bảo hiểm nhà</h4>
@@ -62,7 +62,7 @@
 	    					<div class="box-img"><img src="images/bao_hiem_nha.png" alt="Bảo hiểm nhà"></div>
 	    				</div>
 	    			</div>
-	    			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	    			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
 	    				<div class="box-item">
 	    					<div class="box-title">
 	    						<h4>Thủ tục Pháp lý <br>Mua bán/Cho thuê</h4>
@@ -227,7 +227,7 @@
 			        							<i class="fa fa-calendar"></i>
 			        							<i class="fa fa-comments"></i>
 			        						</div>
-			        						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+			        						<div class="col-xs-6 col-sm-7 col-md-6 col-lg-6 text-right">
 			        							Giá từ: <span>8.4 tỷ</span>
 			        						</div>
 			        					</div>

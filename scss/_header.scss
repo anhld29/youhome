@@ -7,6 +7,15 @@ CSS information
 =================================================================== */
 #header{
 	@extend %cf;
+	.navbar-toggle{
+		color: $white;
+		margin-top: 0;
+		margin-right: 0;
+		@include fsz(22);
+		margin-bottom: 0;
+		padding: 5px 10px;
+
+	}
 	#homepage &{
 		background:transparent url('../images/img_hero.png') center top no-repeat;
 		background-size: cover;
@@ -139,6 +148,18 @@ CSS information
 		}
 	}
 	.header-layout{
+		.menuopen{
+			position: relative;
+			float: right;
+			padding: 5px 10px;
+			line-height: 1;
+			background-color: transparent;
+			background-image: none;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			color: $white;
+			@include fsz(22);
+		}		
 		&.fixed{
 			position: fixed;
 			width: 100%;
@@ -152,11 +173,11 @@ CSS information
 				padding: 10px 0;
 				border-bottom: 1px solid #f8f8f8;
 				.main-menu ul li a{
-					color: #182A48;
+					color: $clr-text-menu;
 				}
 				.btn-link-vip li a.btn-default{
-					border-color: #182A48;
-					color: #182A48;
+					border-color: $clr-text-menu;
+					color: $clr-text-menu;
 				}
 				.logo{
 					.logo-main{
@@ -165,6 +186,14 @@ CSS information
 					.logo-fixed{
 						display: block;
 					}
+				}
+				.menuopen{
+					color: $clr-text-menu;
+				    margin-top: 0;
+				    margin-right: 0;
+				    font-size: 158%;
+				    margin-bottom: 0;
+				    padding: 5px 10px;
 				}
 			}
 
@@ -200,38 +229,59 @@ CSS information
 .box-advance-search {
 	.box-search{
 		@include clearfix;
+		@include mq(sp) {
+			padding: 1em;
+		}
 		.input-group{
 			width: 100%;
 			@include clearfix;
 			border:none;
+			@include mq(sp) {
+				display: block;
+			}
 		}
 	}
 	.box-province{
-		width: 15%;
+		@include cV(width,15%,15%,100%);
 		border-right: 1px solid #D7DCE3;
-		display: table-cell;
+		@include cV(display,table-cell,table-cell,block);
 		vertical-align: top;
-		padding-right: .5em;
-		.form-control{
+		@include cV(padding-right,.5em,.5em,0);
+		@include mq(sp) {
 			border:none;
-			@include box-shadow(none);
-			padding: 25px 20px;
-			line-height: 2;
-			height: 70px;
-			font-weight: bold;
+			@include clearfix;
+		}
+		.form-control{
+			@include mq(pc_tab) {
+				border:none;
+				@include box-shadow(none);
+				padding: 25px 20px;
+				line-height: 2;
+				height: 70px;
+				font-weight: bold;
+			}
+			@include mq(tab) {
+				padding: 25px 10px;
+			}
 		}
 	}
 	.box-input-search{
-		width: 70%;
-		display: table-cell;
+		@include cV(width,60%,45%,100%);
+		@include cV(display,table-cell,table-cell,block);
 		vertical-align: top;
+		@include mq(sp) {
+			margin: .5em 0;
+			@include clearfix;
+		}
 		.form-control{
-			border:none;
-			@include box-shadow(none);
-			padding: 25px 20px;
-			line-height: 2;
-			height: 70px;
-			font-weight: normal;
+			@include mq(pc_tab) {
+				border:none;
+				@include box-shadow(none);
+				padding: 25px 20px;
+				line-height: 2;
+				height: 70px;
+				font-weight: normal;
+			}
 		}
 	}
 	.box-advance-button{
@@ -240,13 +290,18 @@ CSS information
 		height: 70px;
 		font-weight: normal;	
 		border-left: 1px solid #D7DCE3;	
-		display: table-cell;
+		@include cV(display,table-cell,table-cell,block);
 		vertical-align: top;
+		@include mq(sp) {
+			width: 100%;
+			@include clearfix;
+			display: none;
+		}
 	}
 	.box-button-search{
-		display: table-cell;
+		@include cV(display,table-cell,table-cell,block);
 		vertical-align: top;
-		width: 10%;
+		@include cV(width,10%,10%,100%);
 		background:#0999D8;
 		.btn-primary{
 			padding: 25px 50px;
@@ -258,6 +313,12 @@ CSS information
 			@include border-radius(0);
 			text-transform: uppercase;
 			border:none;
+			@include mq(sp) {
+				padding: 15px 20px;
+				display: block;
+				height: auto;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -267,13 +328,20 @@ CSS information
 	position: absolute;
 	top: 105%;
 	width: 100%;
+	@include mq(sp) {
+		display: none;
+	}
 	.box-inner{
 		@include clearfix;
 		h4{
 			margin-bottom: .5em;
 		}
 		.col-item{
-			@include grid_col(5,2%,1);
+			@include grid_col(5,2%,0);
+			@include mq(sp) {
+				width: 100%;
+				margin-bottom: 1em;
+			}
 		}
 	}
 	.box-close{

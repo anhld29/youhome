@@ -13,8 +13,7 @@
         </nav>
         <div class="header-main">
             <div class="container-fluid">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="menuopen view_tab-sp">
                     <span class="fa fa-bars"></span>
                 </button>            
                 <div class="logo pull-left">
@@ -23,7 +22,7 @@
                         <img src="<?php echo LOCATION;?>images/logo-youhomes-clr.png" class="logo-fixed">
                     </a>
                 </div>
-                <div class="main-menu pull-left view_pc-tab">
+                <div class="main-menu pull-left view_pc">
                     <ul>
                         <li><a href="#">Mua <i class="fa fa-angle-down"></i></a></li>
                         <li><a href="">Thuê</a></li>
@@ -56,7 +55,7 @@
                     <div id="panel01" class="panel_inner">
                         <div class="box-search">
                             <div class="input-group">
-                                <div class="pull-left box-province">
+                                <div class="box-province">
                                     <select class="form-control">
                                         <option value="1">Hà Nội</option>
                                         <option value="2">TP.HCM</option>
@@ -65,10 +64,10 @@
                                         <option value="5">Đà Nẵng</option>
                                     </select>
                                 </div>
-                                <div class="pull-left box-input-search">
+                                <div class="box-input-search">
                                     <input type="text" class="form-control" placeholder="Nhập tên địa chỉ, quận, dự án...">
                                 </div>
-                                <div class="pull-left box-advance-button">Nâng cao <i class="fa fa-angle-down"></i></div>
+                                <div class="box-advance-button">Nâng cao <i class="fa fa-angle-down"></i></div>
                                 <span class="box-button-search">
                                     <button class="btn btn-primary" type="button">Tìm kiếm</button>
                                 </span>
@@ -119,7 +118,7 @@
                     <div id="panel02" class="panel_inner">
                         <div class="box-search">
                             <div class="input-group">
-                                <div class="pull-left box-province">
+                                <div class="box-province">
                                     <select class="form-control">
                                         <option value="1">Hà Nội</option>
                                         <option value="2">TP.HCM</option>
@@ -128,10 +127,10 @@
                                         <option value="5">Đà Nẵng</option>
                                     </select>
                                 </div>
-                                <div class="pull-left box-input-search">
+                                <div class="box-input-search">
                                     <input type="text" class="form-control" placeholder="Nhập tên địa chỉ, quận, dự án...">
                                 </div>
-                                <div class="pull-left box-advance-button">Nâng cao <i class="fa fa-angle-down"></i></div>
+                                <div class="box-advance-button">Nâng cao <i class="fa fa-angle-down"></i></div>
                                 <span class="box-button-search">
                                     <button class="btn btn-primary" type="button">Tìm kiếm</button>
                                 </span>

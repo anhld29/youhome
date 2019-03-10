@@ -81,5 +81,29 @@ $(function(){
 				$('.header-layout').removeClass('fixed');
 			}
 		}
-	});    
+	});
+
+	$('.menuopen').click(function(){
+		if($('body').hasClass('fix_active')) {
+			$('body').removeClass('fix_active');
+			$html.css({
+				overflowY: '',
+				height: '',
+				margin:''
+			});
+		} else {
+			$('body').addClass('fix_active');
+			$html.css({
+				overflowY: 'hidden',
+				height: '100%',
+			});		    
+		}
+	});	 
+
+    $('.footer-widget-link h4').click(function(){
+        if(!$(this).is('.sp_only') || $(this).is('.sp_only') && abi.sp) {
+            var $next = $(this).next();
+            if(!$next.is(':animated')) $next.slideToggle(200).prev().toggleClass('active');		
+        }
+    });		   
 });
