@@ -17,7 +17,12 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>            
-                <div class="logo pull-left"><a href="#"><img src="<?php echo LOCATION;?>images/logo.png"></a></div>
+                <div class="logo pull-left">
+                    <a href="#">
+                        <img src="<?php echo LOCATION;?>images/logo.png" class="logo-main">
+                        <img src="<?php echo LOCATION;?>images/logo-youhomes-clr.png" class="logo-fixed">
+                    </a>
+                </div>
                 <div class="main-menu pull-left view_pc-tab">
                     <ul>
                         <li><a href="#">Mua <i class="fa fa-angle-down"></i></a></li>
@@ -112,7 +117,7 @@
                         </div>                                                    
                     </div><!-- /#panel01 -->
                     <div id="panel02" class="panel_inner">
-<div class="box-search">
+                        <div class="box-search">
                             <div class="input-group">
                                 <div class="pull-left box-province">
                                     <select class="form-control">

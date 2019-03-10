@@ -335,6 +335,10 @@ CSS information
 	}
 }
 
+#header .header-main .logo .logo-fixed {
+	display: none;
+}
+
 #header .header-main .main-menu {
 	width: 64%;
 }
@@ -418,6 +422,40 @@ CSS information
 	#header .box-advance-search h2 {
 		font-size: 215%;
 	}
+}
+
+#header .header-layout.fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+}
+
+#header .header-layout.fixed .navbar {
+	margin-bottom: 0;
+}
+
+#header .header-layout.fixed .header-main {
+	background: #FFF;
+	padding: 10px 0;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+#header .header-layout.fixed .header-main .main-menu ul li a {
+	color: #182A48;
+}
+
+#header .header-layout.fixed .header-main .btn-link-vip li a.btn-default {
+	border-color: #182A48;
+	color: #182A48;
+}
+
+#header .header-layout.fixed .header-main .logo .logo-main {
+	display: none;
+}
+
+#header .header-layout.fixed .header-main .logo .logo-fixed {
+	display: block;
 }
 
 .box-count-down ul {

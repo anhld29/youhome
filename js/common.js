@@ -44,7 +44,7 @@ $(function(){
 			});
 		}
 	}
-	
+
     var $tab = $('#tab'),
         $li = $tab.find('li'),
         $select = $tab.find('select');
@@ -64,4 +64,22 @@ $(function(){
         var i = $(this).prop('selectedIndex');
         $li.eq(i).trigger('click');
     });
+
+	var showFlug = false;
+		wH = $w.height();			    		    			    			
+	var showFlug = false;
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() >= 550) {
+			if (showFlug == false) {
+				showFlug = true;		
+				$('.header-layout').addClass('fixed');
+			}
+		} else {
+			if (showFlug) {
+				showFlug = false;
+				$('.header-layout').removeClass('fixed');
+			}
+		}
+	});    
 });

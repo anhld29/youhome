@@ -79,6 +79,9 @@ CSS information
 			@include cV(width,10%,10%,25%);
 			// position: absolute;
 			// right: 100%;
+			.logo-fixed{
+				display: none;
+			}
 		}
 		.main-menu{
 			@extend %cf;
@@ -133,6 +136,38 @@ CSS information
 			@include mq(sp) {
 				@include fsz(30);
 			}
+		}
+	}
+	.header-layout{
+		&.fixed{
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 99;
+			.navbar{
+				margin-bottom: 0;
+			}
+			.header-main{
+				background:$white;
+				padding: 10px 0;
+				border-bottom: 1px solid #f8f8f8;
+				.main-menu ul li a{
+					color: #182A48;
+				}
+				.btn-link-vip li a.btn-default{
+					border-color: #182A48;
+					color: #182A48;
+				}
+				.logo{
+					.logo-main{
+						display: none;
+					}
+					.logo-fixed{
+						display: block;
+					}
+				}
+			}
+
 		}
 	}
 }
