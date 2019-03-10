@@ -1,0 +1,285 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+ file name  : common.css
+ author     : Le Duc Anh
+ website : mauthietke.info
+=================================================================== */
+#header{
+	@extend %cf;
+	#homepage &{
+		background:transparent url('../images/img_hero.png') center top no-repeat;
+		background-size: cover;
+		padding-bottom: 30px;
+		min-height: 800px;		
+	}
+	.navbar{
+		background:$navatop;
+		@include border-radius(0);
+		border:none;
+		@include mq(sp) {
+			.navbar-nav{
+				width: calc(100% + 15px);
+				margin: 7px -10px 7px 0;
+				li{
+					float: left;
+				}
+			}
+		}
+		.navbar-brand{
+			font-size: 100%;
+			color: $white;
+		}
+		.navbar-nav {
+			li{
+				a{
+					color: $white;
+				}
+				&.lnk-register a{
+					padding-right:7px;
+				}
+				&.lnk-login a{
+					padding-left: 0px;
+					&:before{
+						content: "/";
+						padding-right: 7px;
+						@include mq(sp) {
+							position: absolute;
+							right: -7px;
+						}
+					}
+				}
+				&:first-child{
+					.fa{
+						@include fsz(17);
+						margin-right: .3em;
+						vertical-align: middle;
+					}
+				}
+				@include mq(sp) {
+					float: left;
+					&.lnk-register,&.lnk-login{
+						float: right;
+					}
+				}				
+			}
+		}
+	}
+	.container-fluid{
+		@include mq(pc) {
+			padding: 0 40px;
+		}
+	}
+	.header-main{
+		@extend %cf;
+		.container{
+			position: relative;
+		}
+		.logo{
+			@include cV(width,10%,10%,25%);
+			// position: absolute;
+			// right: 100%;
+		}
+		.main-menu{
+			@extend %cf;
+			@include cV(width,64%,85%,100%);
+			ul{
+				@extend %cf;
+				clear: both;
+				li{
+					float: left;
+					a{
+						padding: 15px 30px;
+						color: $white;
+						@include fsz(16);
+						font-weight: 500;
+						display: block;
+						@include mq(tab) {
+							padding: 15px 20px;
+						}
+					}
+				}
+			}
+		}
+		.btn-link-vip{
+			li{
+				float: left;
+				padding: 0 5px;
+				a{
+					padding: 10px 15px;
+					@include fsz(16);
+					font-weight: 500;
+					&.btn-default{
+						background: none;
+						color: $white;
+						border-color: $white;
+					}
+				}
+				// &.btn-free{
+				// 	position: absolute;
+				// 	left: 100%;
+				// }
+			}
+		}
+	}
+	.box-advance-search{
+		@include cV(margin,120px auto 140px,100px auto,50px auto);
+		h2{
+			text-align: center;
+			@include fsz(48);
+			color: $white;
+			margin: .1em 0 1em;
+			font-weight: 300;
+			@include mq(sp) {
+				@include fsz(30);
+			}
+		}
+	}
+}
+.box-count-down{
+	ul{
+		text-align: center;
+		@include clearfix;
+		li{
+			display: inline-block;
+			color: $white;
+			@include cV(padding,0 40px,0 40px,0 20px);
+			text-align: center;
+			.count-number{
+				@include fsz(42);
+				font-weight: 300;
+				@include mq(sp) {
+					@include fsz(30);
+				}
+			}
+			.count-lable{
+				line-height: 1.5;
+			}
+			@include mq(sp) {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+}
+.box-advance-search {
+	.box-search{
+		@include clearfix;
+		.input-group{
+			width: 100%;
+			@include clearfix;
+			border:none;
+		}
+	}
+	.box-province{
+		width: 15%;
+		border-right: 1px solid #D7DCE3;
+		display: table-cell;
+		vertical-align: top;
+		padding-right: .5em;
+		.form-control{
+			border:none;
+			@include box-shadow(none);
+			padding: 25px 20px;
+			line-height: 2;
+			height: 70px;
+			font-weight: bold;
+		}
+	}
+	.box-input-search{
+		width: 70%;
+		display: table-cell;
+		vertical-align: top;
+		.form-control{
+			border:none;
+			@include box-shadow(none);
+			padding: 25px 20px;
+			line-height: 2;
+			height: 70px;
+			font-weight: normal;
+		}
+	}
+	.box-advance-button{
+		padding: 25px 20px;
+		line-height: 2;
+		height: 70px;
+		font-weight: normal;	
+		border-left: 1px solid #D7DCE3;	
+		display: table-cell;
+		vertical-align: top;
+	}
+	.box-button-search{
+		display: table-cell;
+		vertical-align: top;
+		width: 10%;
+		background:#0999D8;
+		.btn-primary{
+			padding: 25px 50px;
+			line-height: 2;
+			height: 70px;
+			font-weight: normal;	
+			display: block;	
+			background:#0999D8;	
+			@include border-radius(0);
+			text-transform: uppercase;
+			border:none;
+		}
+	}
+}
+.box-advance-inner{
+	padding: 15px;
+	background:$white;
+	position: absolute;
+	top: 105%;
+	width: 100%;
+	.box-inner{
+		@include clearfix;
+		h4{
+			margin-bottom: .5em;
+		}
+		.col-item{
+			@include grid_col(5,2%,1);
+		}
+	}
+	.box-close{
+		margin-top: 1em;
+		text-align: right;
+	}
+}
+
+
+/* -----------------------------------------------------------
+	#tabs
+----------------------------------------------------------- */
+.box-tab {
+    #tab {
+    	@include clearfix;
+        ul {
+            li {
+                cursor: pointer;
+                @include box-sizing(border-box);
+                float: left;
+                padding: 1em 3em;
+                text-align: center;
+                color: #FFF;
+                font-weight: 500;
+                @include fsz(14);
+                @include border-radius(5px 5px 0 0);
+                background:#1D2C4C;
+                margin-right: 5px;
+                &.active { 
+                	cursor: default; 
+                	background:#0999D8;
+                }
+            }
+        }
+    }
+    #panel {
+    	position: relative;
+        .panel_inner {
+            display: none;
+            background: #FFF;
+            &:first-child { display: list-item; }
+        }
+    }
+}

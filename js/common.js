@@ -44,5 +44,24 @@ $(function(){
 			});
 		}
 	}
-
+	
+    var $tab = $('#tab'),
+        $li = $tab.find('li'),
+        $select = $tab.find('select');
+ 
+    $li.click(function(){
+        var target = $(this).attr('data-target');
+        if($(target).is(':hidden')) {
+            $(target).fadeIn(300).siblings().hide();
+            $(this).addClass('active').siblings().removeClass('active');
+            $select.val(target);
+        }
+    });
+ 
+    $select
+    .prop('selectIndex',1)
+    .change(function(){
+        var i = $(this).prop('selectedIndex');
+        $li.eq(i).trigger('click');
+    });
 });

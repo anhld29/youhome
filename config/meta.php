@@ -16,9 +16,9 @@
 --------------------------------------------------*/
 
 //共通文言
-define('TITLE', 'タイトルが入ります', true);
+define('TITLE', 'Home Pages', true);
 define('KEYWORDS', 'key,key,key,key,key,key,key,key,key', true);
-define('DESCRIPTION', 'デスクリプションが入ります', true);
+define('DESCRIPTION', 'Description', true);
 
 
 //初期文言
@@ -39,12 +39,6 @@ if($page == 'homepage') {
 	$meta['description'] = DESCRIPTION;
 }
 
-#コピー
-if($page == 'copy') {
-	$meta['title'] = 'コピー | '.TITLE;
-	$meta['keywords'] = KEYWORDS.',コピー';
-	$meta['description'] = DESCRIPTION;
-}
 
 
 /*--    Error page
