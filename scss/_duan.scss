@@ -182,3 +182,29 @@ CSS information
 		}
 	}
 }
+/* -----------------------------------------------------------
+	#page du an chi tiet
+----------------------------------------------------------- */
+.page-detail{
+	@include clearfix;
+	.box-images-detail{
+		width: 100%;
+		@include clearfix;
+		.list-images-detail{
+			@include clearfix;
+			li{
+				width: 25%;
+				float: left;
+				height: 50%;
+				&.img-detail-lg{
+					width: 50%;
+					height: 100%;
+				}
+				img{
+					width: 100%;
+					border:1px solid $white;
+				}
+			}
+		}
+	}
+}
