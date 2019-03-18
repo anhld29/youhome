@@ -1,4 +1,4 @@
-<div class="bg-gray box-reg-nhanmail">
+<div class="bg-gray box-reg-nhanmail view_pc-tab">
 	<div class="container box-reg-mail">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-6col-lg-6 box-alert-mail">
